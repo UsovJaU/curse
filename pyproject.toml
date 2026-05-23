@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "curse"
+version = "0.1.0"
+description = "CLI для поиска комплектующих по локальной базе и Selenium-парсерам."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "beautifulsoup4==4.14.3",
+  "rapidfuzz==3.14.5",
+  "selenium==4.43.0",
+]
+
+[project.scripts]
+curse = "main:main"
+
+[tool.setuptools]
+py-modules = ["config", "eldorado", "main", "search", "sitilink"]
